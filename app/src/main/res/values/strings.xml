@@ -10,5 +10,6 @@
     <string name="round_up_tip">Round up tip?</string>
     <string name="tip_amount">Tip Amount: %s</string>
     <string name="no_string" translatable="false" formatted="false">Enter a valid amount</string>
+    <string name="label">Tip</string>
 
 </resources>

@@ -7,6 +7,7 @@ import android.view.inputmethod.InputMethodManager
 import com.example.tipcalculator.databinding.ActivityMainBinding
 import java.text.NumberFormat
 import java.util.*
+import kotlin.math.ceil
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -24,7 +25,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun calculateTip() {
-        val stringInTextField = binding.costOfService.text.toString()
+        val stringInTextField = binding.costOfServiceEditText.text.toString()
         val cost = stringInTextField.toDoubleOrNull()
         if (cost == null) {
             binding.tipResult.text = getText(R.string.no_string)
@@ -40,7 +41,7 @@ class MainActivity : AppCompatActivity() {
         }
         var tip = tipPercentage * cost
         if (roundUp) {
-            tip = kotlin.math.ceil(tip)
+            tip = ceil(tip)
         }
 
         val formattedTip = NumberFormat.getCurrencyInstance(Locale("en", "IN")).format(tip)

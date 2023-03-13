@@ -8,21 +8,47 @@
     tools:context=".MainActivity">
 
 
-    <EditText
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/cost_of_service"
         android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:hint="@string/cost_of_service"
-        android:importantForAutofill="no"
-        android:inputType="numberDecimal"
-        android:textColorHint="#757575"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/cost_of_service_edit_text"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:hint="@string/cost_of_service"
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal"
+            android:textColorHint="#C60000"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TextContrastCheck,TextContrastCheck,TextContrastCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <!--    <EditText-->
+    <!--        android:id="@+id/cost_of_service"-->
+    <!--        android:layout_width="160dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:hint="@string/cost_of_service"-->
+    <!--        android:importantForAutofill="no"-->
+    <!--        android:inputType="numberDecimal"-->
+    <!--        android:textColorHint="#757575"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.0"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:layout_constraintVertical_bias="0.0"-->
+    <!--        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />-->
 
     <TextView
         android:id="@+id/service_question"
